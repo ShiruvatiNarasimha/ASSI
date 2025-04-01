@@ -17,10 +17,6 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-export const login = async (email: string, password: string) => {
-  const response = await api.post('/login', { email, password });
-  return response.data;
-};
 
 export const getUsers = async (page: number) => {
   const response = await api.get(`/users?page=${page}`);
